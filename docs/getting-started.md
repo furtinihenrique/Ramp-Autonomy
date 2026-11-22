@@ -5,6 +5,28 @@
 ROS2 Jazzy, Gazebo gz-sim 8, and Nav2 (`nav2_controller`, `nav2_lifecycle_manager`, `nav2_velocity_smoother`, `robot_localization`). The MPPI
 critic plugins in `ramp_autonomy_critics` additionally need `libxtensor-dev`.
 
+In addition to this, make sure to create and activate the virtual environment:
+
+Linux/Unix:
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+Windows:
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+Finally, install the dependencies, located in the requiriments.txt:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+These dependencies include NumPy, SciPy, Pandas, and PyYAML. They are used by the validation and analysis scripts and are separate from the ROS package dependencies declared in the respective package.xml files.
+
 ## Build
 
 ```bash
